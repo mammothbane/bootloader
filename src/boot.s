@@ -15,9 +15,9 @@ _start:
     # TODO explain
     cld
 
-
+.global _stack_end
     # initialize stack
-    mov sp, 0x7c00
+    mov sp, _stack_end
 
     lea si, boot_start_str
     call println

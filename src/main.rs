@@ -235,6 +235,6 @@ pub extern "C" fn eh_personality() {
 }
 
 #[no_mangle]
-pub extern "C" fn _Unwind_Resume() {
+pub extern "C" fn _unwind_resume() {
     loop {}
 }
