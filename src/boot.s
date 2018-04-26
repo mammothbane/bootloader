@@ -17,7 +17,7 @@ _start:
 
 .global _stack_end
     # initialize stack
-    mov sp, _stack_end
+    lea sp, _stack_end
 
     lea si, boot_start_str
     call println
