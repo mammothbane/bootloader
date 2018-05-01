@@ -18,7 +18,7 @@ pub(crate) fn map_kernel(
 
     // create a stack
     // TODO create a stack range dynamically (based on where the kernel is loaded)
-    let stack_end = Page::containing_address(VirtAddr::new(0xffff_fc00_0000_0000 - 1));  // right under page tables
+    let stack_end = Page::containing_address(VirtAddr::new(0xffffff8000000000));  // right under page tables
     let stack_size: u64 = 512; // in pages
     let stack_start = stack_end - stack_size;
 
